@@ -102,19 +102,19 @@ st.markdown("""
 @st.cache_resource
 def load_model_resources():
     # Load model configuration
-    with open("models/model_config.json", "r") as f:
+    with open("results\best_model.pth", "r") as f:
         config = json.load(f)
 
     # Load class names
-    with open(config["class_names_path"], "r") as f:
+    with open(config["results\class_names.json"], "r") as f:
         class_names = json.load(f)
 
     # Load label encoder
-    with open(config["label_encoder_path"], "rb") as f:
+    with open(config["results\label_encoder.pkl"], "rb") as f:
         label_encoder = pickle.load(f)
 
     # Load image transformation
-    with open(config["transform_path"], "rb") as f:
+    with open(config["results\inference_transform.pkl"], "rb") as f:
         transform = pickle.load(f)
 
     # Initialize model
