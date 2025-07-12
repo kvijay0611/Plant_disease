@@ -1,0 +1,13 @@
+# Core libraries
+torch
+torchvision
+numpy
+pandas
+Pillow
+matplotlib
+plotly
+scikit-learn
+tqdm
+
+# For web application
+streamlit
