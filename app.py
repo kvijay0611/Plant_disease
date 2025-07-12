@@ -515,14 +515,14 @@ def main():
         st.markdown(
             "<h3 style='color: #43A047; margin-top: 20px;'>Developers:</h3>", unsafe_allow_html=True)
         st.markdown("""
-        - **Sayed Gamal**
-        - **Youssef Mohammed**
+        - **vijay**
+        - **ananth**
         """)
 
         st.markdown(
             "<h3 style='color: #43A047; margin-top: 20px;'>Project Repository:</h3>", unsafe_allow_html=True)
         st.markdown(
-            "[GitHub: Plant-Disease-Classifier](https://github.com/sayedgamal99/Plant-Disease-Classifier)")
+            "[GitHub: Plant-Disease-Classifier](https://github.com/kvijay0611/Plant_disease)")
 
         st.markdown("---")
         st.caption("© 2025 Plant Disease Classifier - All Rights Reserved")
