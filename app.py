@@ -12,9 +12,10 @@ import warnings
 
 warnings.filterwarnings("ignore")
 # Set page configuration
+
 st.set_page_config(
     page_title="Plant Disease Classifier",
-    page_icon="🌿",
+    page_icon="🪴​",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -101,20 +102,20 @@ st.markdown("""
 
 @st.cache_resource
 def load_model_resources():
-    # Load model configuration
-    with open("results\best_model.pth", "r") as f:
+    # Load model configuration JSON
+    with open("results\model_config.json", "r") as f:
         config = json.load(f)
 
     # Load class names
-    with open(config["results\class_names.json"], "r") as f:
+    with open(config["class_names_path"], "r") as f:
         class_names = json.load(f)
 
     # Load label encoder
-    with open(config["results\label_encoder.pkl"], "rb") as f:
+    with open(config["label_encoder_path"], "rb") as f:
         label_encoder = pickle.load(f)
 
     # Load image transformation
-    with open(config["results\inference_transform.pkl"], "rb") as f:
+    with open(config["inference_transform_path"], "rb") as f:
         transform = pickle.load(f)
 
     # Initialize model
@@ -370,7 +371,7 @@ def main():
         model_loaded = False
 
     # App title and header
-    st.markdown("<h1 class='main-header'>🌿 Plant Disease Classifier</h1>",
+    st.markdown("<h1 class='main-header'>🪴​ Plant Disease Classifier</h1>",
                 unsafe_allow_html=True)
     st.markdown("<p class='info-text'>This application uses deep learning to diagnose diseases in plant leaves. Simply upload an image of a plant leaf, and the model will predict if it's healthy or identify the disease.</p>", unsafe_allow_html=True)
 
@@ -416,9 +417,7 @@ def main():
         # Display available classes in an expander
         with st.expander("Available Plant Diseases for Classification"):
             # Format class names for display
-            formatted_classes = [name.replace("_", " ").replace(
-                "__", " ").replace("___", " ").title() for name in class_names]
-
+            formatted_classes = [name.replace("_", " ").replace("__", " ").replace("___", " ").title() for name in class_names]
             # Create a clean table for the class names
             classes_df = pd.DataFrame(
                 {"Available Diseases": formatted_classes})
@@ -507,22 +506,15 @@ def main():
         st.write("- Classes include diseases in tomatoes, potatoes, and peppers")
 
         st.markdown(
-            "<h3 style='color: #43A047; margin-top: 20px;'>Usage Instructions:</h3>", unsafe_allow_html=True)
-        st.write("1. Upload an image of a plant leaf")
-        st.write("2. View the diagnosis and recommended actions")
-        st.write("3. Check detailed information about the disease")
-
-        st.markdown(
-            "<h3 style='color: #43A047; margin-top: 20px;'>Developers:</h3>", unsafe_allow_html=True)
+            "<h3 style='color: #43A047; margin-top: 20px;'>Developer:</h3>", unsafe_allow_html=True)
         st.markdown("""
-        - **vijay**
-        - **ananth**
+        - **Keerti Vijay Ananth**   
         """)
 
         st.markdown(
             "<h3 style='color: #43A047; margin-top: 20px;'>Project Repository:</h3>", unsafe_allow_html=True)
         st.markdown(
-            "[GitHub: Plant-Disease-Classifier](https://github.com/kvijay0611/Plant_disease)")
+            "[GitHub: Plant_disease](https://github.com/kvijay0611/Plant_disease)")
 
         st.markdown("---")
         st.caption("© 2025 Plant Disease Classifier - All Rights Reserved")

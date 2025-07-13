@@ -1,0 +1,8 @@
+{
+  "image_size": [256, 256],
+  "num_classes": 15,
+  "model_path": "results/best_model.pth",
+  "label_encoder_path": "results/label_encoder.pkl",
+  "inference_transform_path": "results/inference_transform.pkl",
+  "class_names_path": "results/class_names.json"
+}
