@@ -103,7 +103,7 @@ st.markdown("""
 @st.cache_resource
 def load_model_resources():
     # Load model configuration JSON
-    with open("results\model_config.json", "r") as f:
+    with open("results\\model_config.json", "r") as f:
         config = json.load(f)
 
     # Load class names
