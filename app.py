@@ -10,6 +10,8 @@ from PIL import Image
 from plant_disease_classifier import PlantDiseaseModel, predict_image
 import warnings
 
+
+
 warnings.filterwarnings("ignore")
 # Set page configuration
 
@@ -378,6 +380,7 @@ def main():
     # Create two columns for upload and image display
     col1, col2 = st.columns([1, 1])
 
+
     # Store uploaded file in a session state
     if 'uploaded_file' not in st.session_state:
         st.session_state.uploaded_file = None
@@ -417,6 +420,9 @@ def main():
         # Display available classes in an expander
         with st.expander("Available Plant Diseases for Classification"):
             # Format class names for display
+            formatted_classes = [name.replace("_", " ") for name in class_names]
+            classes_df = pd.DataFrame({"Available Diseases": formatted_classes})
+            st.table(classes_df)
             formatted_classes = [name.replace("_", " ").replace("__", " ").replace("___", " ").title() for name in class_names]
             # Create a clean table for the class names
             classes_df = pd.DataFrame(
