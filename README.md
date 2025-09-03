@@ -9,9 +9,8 @@ A machine learning project utilizing deep learning to detect and classify diseas
 ***
 
 ## 🚀 Live Demo
-
-> **Add your deployed app link here:*https://kvijay0611-plant-disease-app-fixed-e5hrhl.streamlit.app/*  
-> [LIVE LINK](#)
+ 
+> [LIVE LINK](https://kvijay0611-plant-disease-app-fixed-e5hrhl.streamlit.app/)
 
 ***
 
