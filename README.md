@@ -45,7 +45,7 @@ This repository contains all code, experiments, and app deployment files for a p
 
 4. **Run the web application:**
    ```bash
-   streamlit run main_app.py
+   streamlit run app_fixed.py
    ```
    
    or open the notebook for experimentation:
