@@ -1,7 +1,3 @@
-Here is a professional README file template for your Plant Disease Detection project, including a dedicated placeholder for adding the live link to your app. This format reflects best practices from similar deep learning/agritech repositories and is tailored for clarity and extensibility.[1][2]
-
-***
-
 # Plant Disease Detection
 
 A machine learning project utilizing deep learning to detect and classify diseases in plants, aimed at supporting precision agriculture and crop protection efforts.
